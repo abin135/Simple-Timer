@@ -1,24 +1,4 @@
 .App {
   text-align: center;
-}
-
-img {
-  width: 512px;
-  height: 512px;
-  object-position: 0px 5px;
-}
-
-input {
-  width: 200px;
-  padding: 5px;
-  margin: 5px;
-}
-
-button {
-  padding: 10px;
-  color: aliceblue;
-  background-color: darkgreen;
-  margin: 2px;
-  border: 1px;
-  border-radius: 10px;
+  font-size: large;
 }

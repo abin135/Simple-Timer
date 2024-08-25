@@ -2,32 +2,32 @@ import React, { useEffect, useState } from 'react';
 import './App.css';
 import Button from './components/Button';
 import TextInput from './components/TextInput';
-import Graphic from './components/Graphic';
+import StartButton from './components/StartButton.js';
+import EndButton from './components/EndButton.js';
+import TimeGraph from './components/TimeGraph.js';
 
 function App() {
   const [timeRemaining, setTimeRemaining] = useState(0);
   const [inputNum, setInputNum] = useState(0);
+  const [initialTime, setInitialTime] = useState(0);
 
   useEffect(() => {
     timer();
   }, []);
 
   const timer = () => {
+    setTimeRemaining(initialTime);
     const interval = setInterval(() => {
       setTimeRemaining((prevTime) => {
         if (prevTime === 0) {
           clearInterval(interval);
           return 0;
         } else {
-          return prevTime - 1;
+          return (prevTime - 1);
         }
       });
     }, 1000);  
     return () => clearInterval(interval);
-  };
-
-  const handleStart = () => {
-    timer();
   };
 
   const handleEnd = () => {
@@ -35,20 +35,16 @@ function App() {
   };  
 
   const handleSeconds = () => {
-    setTimeRemaining(inputNum);
+    setInitialTime(inputNum);
   };
 
   const handleMinutes = () => {
-    setTimeRemaining(inputNum * 60);
+    setInitialTime(inputNum * 60);
   };
 
   const handleHours = () => {
-    setTimeRemaining(inputNum * 3600);
+    setInitialTime(inputNum * 3600);
   };
-
-  const data = [
-    { start: "Timer", time: inputNum }
-  ];
 
   return (
     <div className="App">
@@ -58,9 +54,9 @@ function App() {
       <Button label="MINUTES" onClick={handleMinutes}/>
       <Button label="HOURS" onClick={handleHours}/>
       <br></br>
-      <Button label="START" onClick={handleStart}/>
-      <Button label="END" onClick={handleEnd} />
-      <Graphic width={250} height={100} data={data} />
+      <StartButton onClick={timer} />
+      <EndButton onClick={handleEnd} />
+      <TimeGraph />
     </div>
   )
 };

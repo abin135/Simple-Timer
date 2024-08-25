@@ -1,4 +1,5 @@
 import React from 'react';
+import classes from './TextInput.module.css';
 
 const TextInput = ({ value, onChange }) => {
     return (
@@ -7,6 +8,7 @@ const TextInput = ({ value, onChange }) => {
         value={value}
         onChange={onChange}
         placeholder="Enter the amount of seconds"
+        className={classes.input}
         />
     );
 };
