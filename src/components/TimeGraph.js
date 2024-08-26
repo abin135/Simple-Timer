@@ -12,14 +12,13 @@ const data = {
       'rgb(0, 97, 10)',
       'rgb(0, 100, 243)'
     ],
-    borderWidth: 2,
-    radius: '40%'   
-  }]
+    borderWidth: 2
+  }] 
 };
 
 function TimeGraph() {
   return (
-    <div>
+    <div style={ {width: '40%', height: '40%'} }>
         <Doughnut data={data}/>
     </div>
   );

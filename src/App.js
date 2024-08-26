@@ -45,7 +45,7 @@ function App() {
   const handleHours = () => {
     setInitialTime(inputNum * 3600);
   };
-
+  
   return (
     <div className="App">
       <h1>Timer: {timeRemaining} seconds left</h1>
