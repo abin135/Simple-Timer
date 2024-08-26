@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Simple-Timer/static/css/main.402e6af8.css",
-    "main.js": "/Simple-Timer/static/js/main.0401e559.js",
+    "main.js": "/Simple-Timer/static/js/main.2abc466e.js",
     "static/js/453.efdb6ca8.chunk.js": "/Simple-Timer/static/js/453.efdb6ca8.chunk.js",
     "index.html": "/Simple-Timer/index.html",
     "main.402e6af8.css.map": "/Simple-Timer/static/css/main.402e6af8.css.map",
-    "main.0401e559.js.map": "/Simple-Timer/static/js/main.0401e559.js.map",
+    "main.2abc466e.js.map": "/Simple-Timer/static/js/main.2abc466e.js.map",
     "453.efdb6ca8.chunk.js.map": "/Simple-Timer/static/js/453.efdb6ca8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.402e6af8.css",
-    "static/js/main.0401e559.js"
+    "static/js/main.2abc466e.js"
   ]
 }
